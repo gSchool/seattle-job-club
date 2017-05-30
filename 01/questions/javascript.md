@@ -2,9 +2,6 @@
 
 ### Organize code with functions
 
-- Some functions return values
-- Some functions mutate state (console log, dom, file systems etc...)
-
 <details>
   <summary>What are the three core things a function can do?</summary>
 
@@ -14,9 +11,6 @@
 <br />
 
 ### Define what closures are and how they work in JavaScript.
-
-- Describe closures
-- Define higher order functions
 
 <details>
   <summary>What is a Closure?</summary>
@@ -28,11 +22,6 @@
 
 ### Define and call higher order functions.
 
-- Call a higher order function, passing it an anonymous function as a argument
-- Call a higher order function, passing it a named function as a argument
-- Call a higher order function, passing it a reference to a function as an argument
-- Identify addEventListener as a higher order function
-
 <details>
   <summary>What is a higher-order-function?</summary>
 
@@ -42,10 +31,6 @@
 <br />
 
 ### Define and evaluate scope in JavaScript.
-
-- Describe how hoisting works
-- Describe the various kinds of scope in JavaScript
-- Define and describe IIFEs and why they are used
 
 <details>
   <summary>What is hoisting?</summary>
@@ -89,10 +74,6 @@
 
 
 ### Distinguish between Primitive and Reference types.
-
-- List types and describe which ones are primitive and which are reference types
-- Describe the difference between primitive and reference types
-- Describe the difference between == and ===
 
 <details>
   <summary>What are the data types in JavaScript?</summary>
@@ -190,11 +171,6 @@
 
 
 ### Use Promises to run sequential asynchronous operations.
-
-- Makes an async call
-- Uses data from the resolved value of the first promise to make a subsequent call
-- Does something with the result of both calls
-- Promises can be nested arbitrarily deeply and still pass this standard
 
 <details>
   <summary>What is a Promise?</summary>
