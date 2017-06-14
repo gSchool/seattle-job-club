@@ -12,6 +12,7 @@ void foo(int[] array){
   }
   
   System.out.println(sum + ", " + product);
+}
 ```
 
 ```
