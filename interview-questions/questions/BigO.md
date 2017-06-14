@@ -15,16 +15,17 @@ void foo(int[] array){
 }
 ```
 
-```
+```java
 void printPairs(int[] array){
   for(int i = 0; i < array.length; i++){
     for(int j = 0; J < array.lenght; J++){
-    System.out.println(array[i] + ", " + array[j]);
+      System.out.println(array[i] + ", " + array[j]);
+     }
   }
 }
 ```
 
-```
+```java
 void printUnorderedParis(int[] array){
   for(int i = 0; i < array.length; i++){
     for(int j = i + j; j < array.length; j++){
