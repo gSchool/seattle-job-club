@@ -14,7 +14,7 @@ describe('Editor', () => {
     expect(editor.toString()).to.equal('Hello - codez moar');
   });
 
-  xit('allows users to undo writes', () => {
+  it('allows users to undo writes', () => {
     const editor = new Editor();
 
     editor.write('Hello - codez');
@@ -36,7 +36,7 @@ describe('Editor', () => {
     expect(editor.toString()).to.equal('');
   });
 
-  xit('allows users to find and replace', () => {
+  it('allows users to find and replace', () => {
     const editor = new Editor();
 
     editor.write('foo stuff');
