@@ -11,12 +11,7 @@ class Editor {
   }
 
   toString() {
-    if (!this.current) {
-      return ''
-    }
-    else {
-      return this.current.text
-    }
+    return (!this.current) ? '' : this.current.text
   }
 
   write(text, replaced=false) {
