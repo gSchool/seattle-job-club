@@ -60,7 +60,7 @@ describe('Editor', () => {
     expect(editor.toString()).to.equal('foo stuff');
   });
 
-  xit('allows users to redo', () => {
+  it('allows users to redo', () => {
     const editor = new Editor();
 
     editor.write('foo stuff');

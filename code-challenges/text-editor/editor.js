@@ -3,6 +3,7 @@ class Editor {
   constructor() {
     this.head = null
     this.tail = null
+    this.current = this.tail
   }
 
   static edit(text, next=null, prev=null) {
@@ -10,11 +11,11 @@ class Editor {
   }
 
   toString() {
-    if (this.tail === null) {
+    if (!this.current) {
       return ''
     }
     else {
-      return this.tail.text
+      return this.current.text
     }
   }
 
@@ -33,14 +34,21 @@ class Editor {
       edited.prev = this.tail
       this.tail = edited
     }
+
+    this.current = this.tail
   }
 
   undo() {
     if (!this.head){
       return undefined
     }
-    const last = this.tail
-    this.tail = last.prev
+    this.current = this.current.prev
+  }
+
+  redo() {
+    if (this.current.next) {
+      this.current = this.current.next
+    }
   }
 
   replace(original, updated) {
