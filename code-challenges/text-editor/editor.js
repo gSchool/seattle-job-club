@@ -34,20 +34,17 @@ class Editor {
   }
 
   undo() {
-    if (!this.head){
-      return undefined
-    }
+    if (!this.head) { return undefined }
     this.current = this.current.prev
   }
 
   redo() {
-    if (this.current.next) {
-      this.current = this.current.next
-    }
+    if (this.current.next) { this.current = this.current.next }
   }
 
   replace(original, updated) {
     const updatedText = this.tail.text.replace(new RegExp(original, 'g'), updated)
+
     this.write(updatedText, true)
   }
 
