@@ -45,7 +45,7 @@ describe('Editor', () => {
     expect(editor.toString()).to.equal('bar stuff other bar');
   });
 
-  xit('allows undo replaces', () => {
+  it('allows undo replaces', () => {
     const editor = new Editor();
 
     editor.write('foo stuff');

@@ -18,7 +18,7 @@ class Editor {
     }
   }
 
-  write(text) {
+  write(text, replaced=false) {
     const edited = Editor.edit(text)
 
     if (this.head === null) {
@@ -26,7 +26,9 @@ class Editor {
       this.tail = this.head
     }
     else {
-      edited.text = this.tail.text + edited.text
+      if (!replaced) {
+        edited.text = this.tail.text + edited.text
+      }
       this.tail.next = edited
       edited.prev = this.tail
       this.tail = edited
@@ -42,9 +44,8 @@ class Editor {
   }
 
   replace(original, updated) {
-    const updatedText = this.tail.text.replace(original, updated)
-    console.log(updatedText);
-    this.write(updatedText)
+    const updatedText = this.tail.text.replace(new RegExp(original, 'g'), updated)
+    this.write(updatedText, true)
   }
 
 }
